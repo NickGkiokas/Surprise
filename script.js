@@ -1,5 +1,6 @@
 document.getElementById('confettiButton').addEventListener('click', function() {
     launchConfetti();
+    playTune();
 });
 
 function launchConfetti() {
@@ -49,4 +50,9 @@ function launchConfetti() {
     }
 
     drawConfetti();
+}
+
+function playTune() {
+    const funTune = document.getElementById('funTune');
+    funTune.play();
 }
