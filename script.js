@@ -1,3 +1,31 @@
+document.getElementById('surpriseButton').addEventListener('click', function() {
+    startCountdown();
+});
+
+function startCountdown() {
+    const countdownElement = document.getElementById('countdown');
+    let countdown = 3;
+    
+    countdownElement.style.display = 'block';
+    countdownElement.textContent = countdown;
+
+    const interval = setInterval(() => {
+        countdown--;
+        countdownElement.textContent = countdown;
+
+        if (countdown === 0) {
+            clearInterval(interval);
+            countdownElement.style.display = 'none';
+            showMessages();
+        }
+    }, 1000);
+}
+
+function showMessages() {
+    document.getElementById('messageContainer').style.display = 'block';
+    document.getElementById('surpriseButton').style.display = 'none';
+}
+
 document.getElementById('confettiButton').addEventListener('click', function() {
     launchConfetti();
     playTune();
@@ -54,5 +82,11 @@ function launchConfetti() {
 
 function playTune() {
     const funTune = document.getElementById('funTune');
-    funTune.play();
+    if (funTune) {
+        funTune.play().catch(error => {
+            console.error('Audio playback failed:', error);
+        });
+    } else {
+        console.error('Audio element not found');
+    }
 }
