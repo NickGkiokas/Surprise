@@ -34,14 +34,14 @@ button {
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
-    background: #4CAF50;
+    background: #2e0ee1;
     color: white;
     border: none;
     border-radius: 5px;
 }
 
 button:hover {
-    background: #45a049;
+    background: #2e0ee1;
 }
 
 canvas {
