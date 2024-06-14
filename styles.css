@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-    color: #2e0ee1;
+    color: #27d536;
 }
 
 p {
@@ -34,14 +34,14 @@ button {
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
-    background: #2e0ee1;
+    background: #27d536;
     color: white;
     border: none;
     border-radius: 5px;
 }
 
 button:hover {
-    background: #2e0ee1;
+    background: #27d536;
 }
 
 canvas {
